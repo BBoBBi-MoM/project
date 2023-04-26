@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<!--
+	Big Picture by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>UFC 승자 예측</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1 style="color: red;">UFC  Winner predictor</h1>
+				<nav>
+					<ul>
+						<li><a href="#intro">Intro</a></li>
+						<li><a href="#one">model</a></li>
+						<li><a href="#two">donate</a></li>
+						<li><a href="#work">predict</a></li>
+						<li></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Intro -->
+			<section id="intro" class="main style1 dark fullscreen">
+				<div class="content">
+					<header>
+						<h2>UFC 승부를 예측합니다</h2>
+					</header>
+					<p>이 사이트는 선수들의 신체정보와 대전기록을 <strong style="color: red;">머신러닝</strong><br>으로 학습하여 승패를 예측합니다(테스트 정확도 66%).</p>
+					<footer>
+						<a href="#one" class="button style2 down">More</a>
+					</footer>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>사용 모델</h2>
+					</header>
+					<p>앙상블 모델인 랜덤 GBM 모델을 사용하였습니다.<br>수제 함수로 최적의 하이퍼파라미터를 찾았습니다.</p>
+				</div>
+				<a href="#two" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>후원해주십시오</h2>
+					</header>
+					<p>국민은행:795302-04-164583(예금주 김동우)<br>
+					기업은행:564-040-358-01010(예금주 김동우)<br>
+					신한은행:110-443-531596(예금주 김동우)<br>
+					카카오뱅크:3333-22-3908804(예금주 김동우)<br>
+					<h6 style="font-size: 1px;" style="color: gray;">(착오송금에 의한 반환은 없습니다)</h6>
+					</p>
+				</div>
+				<a href="#work" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Work -->
+			<section id="work" class="main style3 primary">
+				<div class="content">
+					<header>
+						<h2>승부 예측</h2>
+						<p>Blue fighter의 키와 리치 몸무게 나이와 전적을 입력하시오.</p>
+						<form action = "http://localhost:5000/result" method = "POST">
+							<label for="b_hight_input_box">키(cm):</label>
+							<input type="number" name="b_height_input" style="display: inline-block;" value='188'>
+							<label for="b_reach_input_box">리치(cm):</label>
+							<input type="number" name="b_reach_input" style="display: inline-block;" value='200'>
+							<label for="b_weight_input_box">몸무게(lbs):</label>
+							<input type="number" name="b_weight_input" style="display: inline-block;" value='156'>
+							<label for="b_age_input_box">나이:</label>
+							<input type="number" name="b_age_input" style="display: inline-block;" value='24'>
+							<br>
+
+						<p>Red fighter의 키와 리치 몸무게 나이와 전적을 입력하시오.</p>
+
+							<label for="r_height_input_box">키(cm):</label>
+							<input type="number" name="r_height_input" style="display: inline-block;" value='188'>
+							<label for="r_reach_input_box">리치(cm):</label>
+							<input type="number" name="r_reach_input" style="display: inline-block;" value='200'>
+							<label for="r_weight_input_box">몸무게(lbs):</label>
+							<input type="number" name="r_weight_input" style="display: inline-block;" value='156'>
+							<label for="r_age_input_box">나이:</label>
+							<input type="number" name="r_age_input" style="display: inline-block;" value='24'>
+							<br><br>
+						
+						<input type="submit" value="예측!">
+						</form>
+					</header>
+				</div>
+			</section>
+
+		<!-- Contact -->
+			
+
+		<!-- Footer -->
+			<footer id="footer">
+
+				<!-- Icons -->
+
+
+				<!-- Menu -->
+					<ul class="menu">
+						<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</footer>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.poptrox.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
